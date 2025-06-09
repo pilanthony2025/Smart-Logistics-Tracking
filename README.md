@@ -48,6 +48,34 @@ The smart contract (`IoTDataStorage.sol`) includes:
 
 - `M1_SmartTrackingLedger_Upload.ipynb`  
   → Reads a CSV file and uploads multiple IoT records to the blockchain
+  
+- `M1_IOTLinePlot.ipynb`
+  → Loads cleaned IoT data and creates time-series visualisations using `matplotlib` and `seaborn`.
+---
+
+
+## 📊 Weekly Progress
+
+### ✅ Week 6: Data Cleaning & Preprocessing
+
+- Retrieved IoT records from the smart contract on Ganache.
+- Structured the data into a DataFrame using `pandas`.
+- Converted timestamps to readable datetime format.
+- Extracted and converted sensor values to numeric format.
+- Saved cleaned data as `cleaned_iot_data.csv` inside the `/data` folder.
+
+📁 Output: `data/cleaned_iot_data.csv`
+
+---
+
+### ✅ Week 7: Line Plot of IoT Sensor Readings Over Time
+
+- Loaded cleaned sensor data from Week 6.
+- Visualised sensor readings using `matplotlib` and `seaborn`.
+- Created a full **time-series line plot** of sensor values over time.
+- Added a **zoomed-in view** of the first 10 minutes to reveal early behavior.
+- Included a **box plot** to show value distribution per sensor type.
+- Sorted timestamps and applied styling for clarity.
 
 ---
 
