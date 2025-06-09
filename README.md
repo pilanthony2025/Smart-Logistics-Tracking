@@ -19,14 +19,17 @@ It’s designed to track logistics data in real time and ensure transparency and
 ## 🗂️ Folder Structure
 ```bash
 Smart-Logistics-Tracking/
-├── contracts/ # Contains the Solidity smart contract
-│ └── IoTDataStorage.sol
-├── notebooks/ # Jupyter notebooks for testing and uploading data
-│ ├── M1_SmartTrackingLedger.ipynb
-│ └── M1_SmartTrackingLedger_Upload.ipynb
-├── data/ # Simulated IoT data in CSV format
-│ └── smart_logistics_data.csv
-├── README.md 
+├── contracts/         # Contains the Solidity smart contract
+│   └── IoTDataStorage.sol
+├── notebooks/         # Jupyter notebooks for testing, processing, and plotting
+│   ├── M1_SmartTrackingLedger.ipynb
+│   ├── M1_SmartTrackingLedger_Upload.ipynb
+│   ├── M1_DataRetrievalAndCleaning.ipynb
+│   └── M1_IOTLinePlot.ipynb
+├── data/              # Simulated IoT data in CSV format
+│   ├── smart_logistics_data.csv
+│   └── cleaned_iot_data.csv
+├── README.md
 ```
 
 
@@ -43,11 +46,48 @@ The smart contract (`IoTDataStorage.sol`) includes:
 
 ## 📓 Notebooks
 
-- `M1_SmartTrackingLedger.ipynb`  
-  → Tests the contract manually with one data record
+| Notebook File | Description |
+|---------------|-------------|
+| `M1_SmartTrackingLedger.ipynb` | Tests the smart contract with one manual data record |
+| `M1_SmartTrackingLedger_Upload.ipynb` | Uploads multiple records from CSV to the blockchain |
+| `M1_DataRetrievalAndCleaning.ipynb` | Retrieves data from blockchain, cleans it, and saves it as CSV |
+| `M1_IOTLinePlot.ipynb` | Visualises sensor trends over time with line and box plots |
 
-- `M1_SmartTrackingLedger_Upload.ipynb`  
-  → Reads a CSV file and uploads multiple IoT records to the blockchain
+---
+
+
+## 📊 Weekly Progress
+
+### ✅ Week 6: Data Cleaning & Preprocessing
+
+- Retrieved IoT records from the smart contract on Ganache.
+- Structured the data into a DataFrame using `pandas`.
+- Converted timestamps to readable datetime format.
+- Extracted and converted sensor values to numeric format.
+- Saved cleaned data as `cleaned_iot_data.csv` inside the `/data` folder.
+
+📁 Notebook: `notebooks/M1_DataRetrievalAndCleaning.ipynb`  
+📄 Output: `data/cleaned_iot_data.csv`
+
+---
+
+### ✅ Week 7: Line Plot of IoT Sensor Readings Over Time
+
+- Loaded cleaned sensor data from Week 6.
+- Visualised sensor readings using `matplotlib` and `seaborn`.
+- Created a full **time-series line plot** of sensor values over time.
+- Added a **zoomed-in view** of the first 10 minutes to reveal early behavior.
+- Included a **box plot** to show value distribution per sensor type.
+- Sorted timestamps and applied styling for clarity.
+
+📁 Notebook: `notebooks/M1_IOTLinePlot.ipynb`
+
+#### 🧠 Key Insights:
+- Most readings occurred within a short burst of time
+- Initial drop suggests sensor warm-up or calibration
+- Box plot reveals value variation across sensor types
+
+---
 
 ---
 
