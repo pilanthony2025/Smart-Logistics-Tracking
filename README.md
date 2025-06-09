@@ -8,15 +8,17 @@ This project simulates the recording of sensor data (like temperature) from pack
 ## 🚀 Project Overview
 
 This project uses:
-- 📡 **IoT simulation data** (e.g., package temperature readings)
-- ⛓️ **Solidity smart contracts** deployed on Ganache
-- 🐍 **Python scripts & Jupyter notebooks** to interact with the blockchain using Web3.py
+- **IoT simulation data** (e.g., package temperature readings)
+- **Solidity smart contracts** deployed on Ganache
+- **Python scripts & Jupyter notebooks** to interact with the blockchain using Web3.py
 
 It’s designed to track logistics data in real time and ensure transparency and data integrity using blockchain tech.
 
 ---
 
 ## 🗂️ Folder Structure
+```bash
+Smart-Logistics-Tracking/
 ├── contracts/ # Contains the Solidity smart contract
 │ └── IoTDataStorage.sol
 ├── notebooks/ # Jupyter notebooks for testing and uploading data
@@ -24,7 +26,8 @@ It’s designed to track logistics data in real time and ensure transparency and
 │ └── M1_SmartTrackingLedger_Upload.ipynb
 ├── data/ # Simulated IoT data in CSV format
 │ └── smart_logistics_data.csv
-├── README.md # You're reading it!
+├── README.md 
+```
 
 
 ---
