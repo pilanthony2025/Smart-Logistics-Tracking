@@ -105,7 +105,7 @@ The smart contract (`IoTDataStorage.sol`) includes:
 - Trisha Mei Atienza
 - Roberto Gabrido
 - Phil Anthony Bebeloni
-
+  Karla Missy Castillo
 ---
 
 ## 📌 Notes
